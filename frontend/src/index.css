@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+  --color-bg: #ffffff;
+  --color-surface: #fafafa;
+  --color-ink: #111111;
+  --color-ink-muted: #6b6b6b;
+  --color-ink-faint: #9a9a9a;
+  --color-border: #e7e5e4;
+  --color-border-strong: #d4d2d0;
+
+  --color-accent: #a21e39;
+  --color-accent-hover: #8a1930;
+  --color-accent-soft: #fbecee;
+
+  --color-good: #1a7a4c;
+  --color-good-soft: #eaf6ef;
+  --color-warn: #a3690f;
+  --color-warn-soft: #fbf2e2;
+  --color-critical: #a21e39;
+  --color-critical-soft: #fbecee;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: 'ss01' 1;
+  }
+
+  ::selection {
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+  }
+}
+
+@layer components {
+  .container-page {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+}
+
+@layer components {
+  /* Mission Control hand-off connector: a light packet travelling down the line, used only while a
+     real hand-off event is fresh (see HandoffConnector). */
+  .flow-line {
+    background-image: linear-gradient(to bottom, transparent 0%, var(--color-accent) 50%, transparent 100%);
+    background-size: 100% 200%;
+    animation: flow-down 1.1s linear infinite;
+  }
+  @keyframes flow-down {
+    from { background-position: 0 -100%; }
+    to { background-position: 0 100%; }
+  }
+}

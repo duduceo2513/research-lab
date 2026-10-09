@@ -1,0 +1,200 @@
+{
+  "run": {
+    "id": 18,
+    "topic": "Python basics: Loops",
+    "mode": "RESEARCH",
+    "status": "COMPLETED",
+    "llm_mode": "CLOUD",
+    "education_level": "UNDERGRADUATE",
+    "started_at": "2026-10-08T19:47:38.725297+00:00",
+    "finished_at": "2026-10-08T19:50:30.618994+00:00",
+    "duration_seconds": 171.893697
+  },
+  "definition": "load = (LLM calls + tool calls of an agent) / (all LLM calls + all tool calls of the run)",
+  "agents": [
+    {
+      "agent": "boss",
+      "llm_calls": 0,
+      "tool_calls": 0,
+      "calls": 0,
+      "pct": 0.0,
+      "name": "Boss / Orchestrator",
+      "runs": 1,
+      "duration_ms": 29,
+      "tools": [],
+      "tokens": 0,
+      "cost": 0.0,
+      "failed_tool_calls": 0,
+      "within_load_limit": true
+    },
+    {
+      "agent": "web_research",
+      "llm_calls": 0,
+      "tool_calls": 5,
+      "calls": 5,
+      "pct": 16.7,
+      "name": "Web Research",
+      "runs": 1,
+      "duration_ms": 16055,
+      "tools": [
+        "BRIGHTDATA",
+        "WIKIPEDIA"
+      ],
+      "tokens": 0,
+      "cost": 0.0,
+      "failed_tool_calls": 0,
+      "within_load_limit": true
+    },
+    {
+      "agent": "academic_research",
+      "llm_calls": 0,
+      "tool_calls": 6,
+      "calls": 6,
+      "pct": 20.0,
+      "name": "Academic Research",
+      "runs": 1,
+      "duration_ms": 9454,
+      "tools": [
+        "ARXIV",
+        "CORE",
+        "CROSSREF",
+        "OPENALEX",
+        "OPEN_LIBRARY",
+        "SEMANTIC_SCHOLAR"
+      ],
+      "tokens": 0,
+      "cost": 0.0,
+      "failed_tool_calls": 2,
+      "within_load_limit": true
+    },
+    {
+      "agent": "document_retrieval",
+      "llm_calls": 0,
+      "tool_calls": 5,
+      "calls": 5,
+      "pct": 16.7,
+      "name": "Document Retrieval",
+      "runs": 1,
+      "duration_ms": 17950,
+      "tools": [
+        "HTTP"
+      ],
+      "tokens": 0,
+      "cost": 0.0,
+      "failed_tool_calls": 0,
+      "within_load_limit": true
+    },
+    {
+      "agent": "document_analysis",
+      "llm_calls": 0,
+      "tool_calls": 5,
+      "calls": 5,
+      "pct": 16.7,
+      "name": "Document Analysis",
+      "runs": 1,
+      "duration_ms": 6065,
+      "tools": [
+        "Extractor"
+      ],
+      "tokens": 0,
+      "cost": 0.0,
+      "failed_tool_calls": 0,
+      "within_load_limit": true
+    },
+    {
+      "agent": "source_validator",
+      "llm_calls": 5,
+      "tool_calls": 0,
+      "calls": 5,
+      "pct": 16.7,
+      "name": "Source Validator",
+      "runs": 1,
+      "duration_ms": 45816,
+      "tools": [],
+      "tokens": 9258,
+      "cost": 0.052268,
+      "failed_tool_calls": 0,
+      "within_load_limit": true
+    },
+    {
+      "agent": "lecture_builder",
+      "llm_calls": 1,
+      "tool_calls": 0,
+      "calls": 1,
+      "pct": 3.3,
+      "name": "Lecture Builder",
+      "runs": 1,
+      "duration_ms": 46608,
+      "tools": [],
+      "tokens": 6037,
+      "cost": 0.05057,
+      "failed_tool_calls": 0,
+      "within_load_limit": true
+    },
+    {
+      "agent": "assignment_generator",
+      "llm_calls": 1,
+      "tool_calls": 0,
+      "calls": 1,
+      "pct": 3.3,
+      "name": "Assignment Generator",
+      "runs": 1,
+      "duration_ms": 22747,
+      "tools": [],
+      "tokens": 3373,
+      "cost": 0.02585,
+      "failed_tool_calls": 0,
+      "within_load_limit": true
+    },
+    {
+      "agent": "final_reviewer",
+      "llm_calls": 2,
+      "tool_calls": 0,
+      "calls": 2,
+      "pct": 6.7,
+      "name": "Final Reviewer",
+      "runs": 2,
+      "duration_ms": 6800,
+      "tools": [],
+      "tokens": 6885,
+      "cost": 0.016994,
+      "failed_tool_calls": 0,
+      "within_load_limit": true
+    }
+  ],
+  "totals": {
+    "llm_calls": 9,
+    "tool_calls": 21,
+    "calls": 30,
+    "tokens": 25553,
+    "cost": 0.145682,
+    "failed_tool_calls": 2,
+    "skipped_tool_calls": 2,
+    "events": 340
+  },
+  "load": {
+    "limit_pct": 40.0,
+    "max_pct": 20.0,
+    "busiest_agent": "Academic Research",
+    "passed": true
+  },
+  "tool_limit": {
+    "limit": 5,
+    "over": [
+      "Academic Research"
+    ]
+  },
+  "deliverables": {
+    "sources": 20,
+    "accepted_sources": 8,
+    "lecture": {
+      "version": 1,
+      "status": "APPROVED",
+      "score": 88.0
+    },
+    "assignment": {
+      "status": "APPROVED",
+      "score": 85.0
+    }
+  }
+}

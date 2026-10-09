@@ -1,0 +1,3 @@
+# JS-rendering fallback for blocked/dynamic pages (imported lazily; after installing run
+# `playwright install chromium`).
+playwright>=1.40

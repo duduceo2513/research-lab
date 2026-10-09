@@ -1,0 +1,23 @@
+# secrets
+.env
+*.env.local
+
+# backend
+__pycache__/
+*.pyc
+.venv/
+venv/
+backend/db.sqlite3
+backend/db.sqlite3-*
+backend/media/
+backend/staticfiles/
+
+# frontend
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
